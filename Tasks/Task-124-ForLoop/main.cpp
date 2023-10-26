@@ -11,8 +11,12 @@ int main()
     while (true) {
 
         //For-Loop
-        volatile int n;
-        for (n=0; n<=7; n = n+1) {
+        for (int n=7; n>=0; n = n-1) {
+            printf("n=%d\n", n);
+            leds = n;
+            wait_us(250000);
+        }
+        for (int n=1; n<=7; n = n+2) {
             printf("n=%d\n", n);
             leds = n;
             wait_us(250000);

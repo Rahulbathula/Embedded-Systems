@@ -29,7 +29,7 @@ int main()
         // Turn LED OFF
         greenLED = 0;
         redLED = 0;
-        blueLed = 1;
+        blueLED = 1;
 
         // Wait 0.2 second
         wait_us(200000); 
