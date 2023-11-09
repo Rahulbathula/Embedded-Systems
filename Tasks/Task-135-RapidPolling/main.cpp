@@ -83,6 +83,21 @@ int main()
             //Update display
             disp = count;               
         }
+        if ((btnA_curr != btnA_prev) && (btnB_curr != btnB_prev)) {
+            if (btnA_curr == 1 && btnB_curr == 1) {
+                if (count > 0) {
+                    count = 0;
+                }
+            }
+
+            btnA_prev = btnA_curr;
+            btnB_prev = btnB_curr;
+
+            disp = count;
+
+            wait_us(1000000);
+        }
+
         
         // Slow it down a bit (and debounce the switches)
         wait_us(250000);  
