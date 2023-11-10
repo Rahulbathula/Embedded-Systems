@@ -4,6 +4,11 @@
 using namespace uop_msb;
 using namespace chrono;
 
+BusIn btns(PC_2,PC_3,PC_6);
+DigitalOut Greenled(PC_6);
+DigitalOut Yellow(PC_3);
+DigitalOut Redled(PC_2);
+
 //Fun output stuff
 LCD_16X2_DISPLAY disp;
 Buzzer buzz;
@@ -56,6 +61,27 @@ int main()
 
         //Wait 0.25 seconds
         wait_us(500000);
+
+        if (lightVal < 1000) {
+            Greenled = 1;
+        }
+        else {
+            Greenled = 0;
+        }
+
+        if (potVal > 0x8000) {
+            Yellow = 1;
+        }
+        else {
+            Yellow = 0;
+        }
+
+        if (micVal < 8000) {
+            Redled = 1;
+        }
+        else {
+            Redled = 0;
+        }
 
     }
 }
