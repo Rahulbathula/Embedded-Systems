@@ -4,7 +4,6 @@
 using namespace uop_msb;
 using namespace chrono;
 
-BusIn btns(PC_2,PC_3,PC_6);
 DigitalOut Greenled(PC_6);
 DigitalOut Yellow(PC_3);
 DigitalOut Redled(PC_2);
