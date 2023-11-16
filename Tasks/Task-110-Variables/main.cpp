@@ -39,8 +39,8 @@ int main()
     // Short
     short shortCount = 32766;
     printf("The value of shortCount is %hd\n", shortCount);
-    shortCount = shortCount + 1;
-    printf("add 1 and shortCount is %hd\n", shortCount);
+    shortCount = shortCount + 2;
+    printf("add 2 and shortCount is %hd\n", shortCount);
 
     // Long long
     long long NN = 0x12345678ABCD0001LL; //Literal in HEX

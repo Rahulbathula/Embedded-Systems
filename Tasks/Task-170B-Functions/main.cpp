@@ -1,4 +1,5 @@
 #include "uop_msb.h"
+#include <iterator>
 
 // LED Bar Display
 BusOut dataBits(LED_D0_PIN, LED_D1_PIN, LED_D2_PIN, LED_D3_PIN, LED_D4_PIN, LED_D5_PIN, LED_D6_PIN, LED_D7_PIN);
@@ -7,29 +8,28 @@ DigitalOut LED_RED_LE(LED_RED_LE_PIN);
 DigitalOut LED_GRN_LE(LED_GRN_LE_PIN);
 DigitalOut LED_BLUE_LE(LED_BLUE_LE_PIN);
 
-void led_init()
-{
-    //Disable the LED outputs
-    LED_BAR_OE = 1;
+void led_init(int ) {
+  // Disable the LED outputs
+  LED_BAR_OE = 1;
 
-    //Set data to 0
-    dataBits = 0;
+  // Set data to 0
+  dataBits = 0;
 
-    //Give a little time
-    wait_us(1);
+  // Give a little time
+  wait_us(1);
 
-    //Enable all latches
-    LED_RED_LE  = 1;
-    LED_GRN_LE  = 1;
-    LED_BLUE_LE  = 1;
+  // Enable all latches
+  LED_RED_LE = 1;
+  LED_GRN_LE = 1;
+  LED_BLUE_LE = 1;
 
-    //Give a little time
-    wait_us(1);
+  // Give a little time
+  wait_us(1);
 
-    //Enable all latches
-    LED_RED_LE  = 0;
-    LED_GRN_LE  = 0;
-    LED_BLUE_LE  = 0;
+  // Enable all latches
+  LED_RED_LE = 0;
+  LED_GRN_LE = 0;
+  LED_BLUE_LE = 0;
 }
 
 int main()

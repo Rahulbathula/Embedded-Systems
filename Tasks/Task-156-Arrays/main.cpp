@@ -39,9 +39,9 @@ int main()
         average = Sum / 100;
 
         // TASK b. Display to 1dp
-        printf("Average value of samples:%f\n", average);
+        printf("Average value of samples:%0.1f\n", average);
         // TASK c. Switch green LED on when dark;
-        if (average > 60000.0) {
+        if (average > 30000.0) {
             greenLED = 1;
         }
         else {
